@@ -1,16 +1,18 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import controllers.MaquinasController;
 import models.Maquina;
 import models.Node;
 import models.Person;
+import structures.maps.Maps;
 import structures.sets.Sets;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Sets setsClase = new Sets();
+        /*Sets setsClase = new Sets();
         Set<String> hashSet = setsClase.construirHashSet();
         System.out.println(hashSet);
         System.out.println(hashSet.size());
@@ -41,9 +43,24 @@ public class App {
 
         Set<Person> treePersons = setsClase.personsTreeSet();
         System.out.println(treePersons);
-        System.out.println("Carlos".compareTo("Ana"));
+        System.out.println("Carlos".compareTo("Ana"));*/
 
-        runMaquina();
+        //runMaquina();
+        runMaps();
+    }
+
+
+    private static void runMaps() {
+        Maps maps = new Maps();
+        System.out.println(maps.construirHashMap());
+        System.out.println(maps.construirLinkedHashMap());
+        System.out.println(maps.construirTreeMap());
+        Map<Person, Integer> treePMap = maps.construirTreePersonMap();
+        System.out.println(treePMap);
+        System.out.println("");
+        maps.printFilter(treePMap);
+        System.out.println("");
+        System.out.println(maps.construirTreePersonMapObj());
     }
 
 
