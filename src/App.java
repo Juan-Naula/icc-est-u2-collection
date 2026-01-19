@@ -7,6 +7,7 @@ import controllers.MaquinasController;
 import models.Maquina;
 import models.Node;
 import models.Person;
+import structures.maps.EjerciciosMapas;
 import structures.maps.Maps;
 import structures.sets.Sets;
 
@@ -46,7 +47,39 @@ public class App {
         System.out.println("Carlos".compareTo("Ana"));*/
 
         //runMaquina();
-        runMaps();
+        //runMaps();
+        runEjercicios();
+    }
+
+
+    private static void runEjercicios() {
+        EjerciciosMapas ejercicios = new EjerciciosMapas();
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+            11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+            21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+            11, 12, 13, 14, 15, 16, 17, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,18, 19, 20,
+        11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+        
+        System.out.println(ejercicios.contarDuplicados(list));
+
+        List<Integer> list2 = Arrays.asList(
+            4, 5, 1, 2, 5, 4, 3, 2, 1, 6,
+            7, 3, 8, 9, 6, 7, 10
+        );
+
+        System.out.println(ejercicios.contarElPrimerNoDuplicados(list2));
+
+        List<String[]> entradas = List.of(
+            new String[]{"Ana", "80"},
+            new String[]{"Luis", "90"},
+            new String[]{"Carlos", "70"},
+            new String[]{"Ana", "85"},
+            new String[]{"Sofia", "95"},
+            new String[]{"Luis", "88"},
+            new String[]{"Pedro", "60"},
+            new String[]{"Maria", "75"}
+        );
     }
 
 
