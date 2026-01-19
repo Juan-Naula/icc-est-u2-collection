@@ -1,18 +1,30 @@
-## Getting Started
+# Práctica: Estructuras No Lineales - 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Autor
+- Nombre: [Juan Miguel Naula A.]
+- Carrera/Curso: [Estructura de datos]
 
-## Folder Structure
 
-The workspace contains two folders by default, where:
+##  Ejercicios sobre Mapas  - 19/01/26
+- Práctica: [Ejercicios sobre mapas]
+- Fecha: [2026-01-19]
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Descripción
+Resolucion de ejercicios sobre mapas, aplicando la clase EjerciciosMapas.java, y dentro de ella aplicando 4 metodos lo cuales serian los ejercicios.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Evidencias
+### Ejercicio 1
+Inserta aquí la captura del código o de la ejecución.
+- Archivo: ![alt text](assets/Ejercicio1.png)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### Ejercicio 2 
+Inserta aquí una segunda captura si aplica.
+- Archivo: ![alt text](assets/Ejercicio2.png)
 
-## Dependency Management
+### Ejercicio 3
+Inserta aquí una segunda captura si aplica.
+- Archivo: ![alt text](assets/Ejercicio3.png)
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Ejercicio 4
+Inserta aquí una segunda captura si aplica.
+- Archivo: ![alt text](assets/Ejercicio4.png)

@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -60,7 +61,8 @@ public class App {
             1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
             11, 12, 13, 14, 15, 16, 17, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,18, 19, 20,
         11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
-        
+
+        System.out.println("Ejercicio 1");    
         System.out.println(ejercicios.contarDuplicados(list));
 
         List<Integer> list2 = Arrays.asList(
@@ -68,6 +70,7 @@ public class App {
             7, 3, 8, 9, 6, 7, 10
         );
 
+        System.out.println("Ejercicio 2");
         System.out.println(ejercicios.contarElPrimerNoDuplicados(list2));
 
         List<String[]> entradas = List.of(
@@ -80,6 +83,22 @@ public class App {
             new String[]{"Pedro", "60"},
             new String[]{"Maria", "75"}
         );
+        
+        System.out.println("Ejercicio 3");
+        System.out.println(ejercicios.rankingPuntajes(entradas));
+
+        Map<String, Integer> datos = new HashMap<>();
+        datos.put("Computacion-Ana", 85);
+        datos.put("Computacion-Luis", 92);
+        datos.put("Electronica-Carlos", 78);
+        datos.put("Electronica-Maria", 88);
+        datos.put("Computacion-Pedro", 90);
+        datos.put("Mecanica-Juan", 80);
+        datos.put("Mecanica-Sofia", 95);
+
+        System.out.println("Ejercicio 4");
+        System.out.println(ejercicios.maxPorGrupo(datos));
+        
     }
 
 

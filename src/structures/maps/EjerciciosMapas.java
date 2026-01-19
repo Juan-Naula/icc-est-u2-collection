@@ -4,8 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-
-import models.Person;
+import java.util.Comparator;
 
 public class EjerciciosMapas {
     public Map contarDuplicados(List<Integer> list){
@@ -33,11 +32,33 @@ public class EjerciciosMapas {
         return -1;
     }
 
-    public Map rankingPuntajes(List<String> list){
-        Map<String, String> rankingPuntajes = new TreeMap<>();
-        for (String str : list) {
-            
+    public Map rankingPuntajes(List<String[]> list){
+        Map<String, Integer> maxPuntajes = new HashMap<>();
+        for (String[] entrada : list) {
+            String nombre = entrada[0];
+            int puntaje = Integer.parseInt(entrada[1]);
+            maxPuntajes.put(nombre, Math.max(maxPuntajes.getOrDefault(nombre, 0), puntaje));
         }
-        return rankingPuntajes;
+        
+        Map<String, Integer> ranking = new TreeMap<>(
+            Comparator.comparing((String nombre) -> maxPuntajes.get(nombre)).reversed()
+        );
+        ranking.putAll(maxPuntajes);
+        
+        return ranking;
+    }
+
+    public Map maxPorGrupo(Map<String, Integer> datos){
+        Map<String, Integer> maxPorCarrera = new HashMap<>();
+        for (String key : datos.keySet()) {
+            String[] partes = key.split("-");
+            String carrera = partes[0];
+            int nota = datos.get(key);
+            
+            if (!maxPorCarrera.containsKey(carrera) || maxPorCarrera.get(carrera) < nota) {
+                maxPorCarrera.put(carrera, nota);
+            }
+        }
+        return maxPorCarrera;
     }
 }
